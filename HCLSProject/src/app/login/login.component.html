@@ -1,0 +1,33 @@
+<div class="row" style="padding : 10px">               
+    <div class="col-sm-12">
+        <div style="background-color: white;width: 100%;border-radius: 10px; ">
+            <div class="row" style="color:red;text-align: center;">
+                <div class="col-sm-12">
+                    <h1 style="margin-top: 20px;">Login</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">UserNmae</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Username" id="txtEmpId" class="form-control" placeholder="Email Or Phone number ...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Password</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Password" id="txtEname" class="form-control" placeholder="Please Enter Password...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;text-align: center;">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-primary" id="btnLogin" value="Login"  (click)="btn_Login()" /> | 
+                    <input type="button" class="btn btn-danger" id="btnCancel" value="Cancel"  (click)="btn_Cancel()"/>
+                </div>                                       
+            </div>
+        </div>
+     </div>

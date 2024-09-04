@@ -1,0 +1,85 @@
+<div class="row" style="padding : 10px">               
+    <div class="col-sm-12">
+        <div style="background-color: white;width: 100%;border-radius: 10px; ">
+            <div class="row" style="color:red;text-align: center;">
+                <div class="col-sm-12">
+                    <h1 style="margin-top: 20px;">Registration</h1>
+                </div>
+            </div>
+            <!-- <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">EmpId</span></div>
+                <div class="col-sm-3">
+                    <input type="text" id="txtEmpId" class="form-control" placeholder="Please Enter EmpId...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div> -->
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Name</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Adminn.name"  id="txtEname" class="form-control" placeholder="Please Enter Name...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Gender</span></div>
+                <div class="col-sm-3">
+                    <input type="radio" [(ngModel)]="Adminn.gender" id="rbtnMale" name="Gender" value="Male"><span style="font-weight: bold;">Male</span>
+                    <input type="radio" [(ngModel)]="Adminn.gender" id="rbtnFemale" name="Gender" value="Female"><span style="font-weight: bold;">Female</span>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Email</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Adminn.email"  id="txtEmail" class="form-control" placeholder="Please Enter Email Address...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Password</span></div>
+                <div class="col-sm-3">
+                    <input type="password" [(ngModel)]="Adminn.password" id="txtPwd" class="form-control" placeholder="Please Enter Password...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Address</span></div>
+                <div class="col-sm-3">
+                    <textarea id="txtAddress" [(ngModel)]="Adminn.address" class="form-control" rows="" placeholder="Please Enter Address...!" ></textarea>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Active</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Adminn.active" id="act1" class="form-control" placeholder="  Enter Active Status...!" />
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">AdminTypeId</span></div>
+                <div class="col-sm-3">
+                    <select [(ngModel)]="Adminn.adminTypeId" class="form-control">
+                        <option value="0">-Select Option-</option>  
+                        <option *ngFor="let admintype of AdminTypeList" value="{{admintype.adminTypeId}}">{{admintype.adminTypeName}}</option>                     
+                    </select>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" style="margin-top: 20px;text-align: center;">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-primary" id="btnRegister" value="Register" (click)="btn_Register()"  /> | 
+                    <input type="button" class="btn btn-danger" id="btnCancel" value="Cancel" (click)="btn_Cancel()" />
+                </div>                                       
+            </div>
+        </div>
+    </div>               
+</div>

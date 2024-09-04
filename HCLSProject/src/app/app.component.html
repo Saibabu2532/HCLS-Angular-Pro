@@ -1,0 +1,145 @@
+ <div *ngIf="flagAnony">
+ <!-- Anonymous Pages -->
+ <div class="row">
+  <div class="col-sm-12">
+
+    <div class="row" style="background-color:#b4ebed;height: 100px;padding-top: 10px;">
+      <div class="col-sm-3">
+        <img  style="width: 75px;" src="Images/Logo.png" alt="Logo" />
+      </div>
+      <div class="col-sm-7" style="margin-top: 30px;">
+        <a routerLink = "home" style="color: red;  font-weight: bold;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a routerLink = "login"  style="color: red; font-weight: bold;">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink = "register"  style="color: red; font-weight: bold;">ManagerAdminRegister</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink = "aboutus" style="color: red; font-weight: bold;">Aboutus</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink = "contactus" style="color: red; font-weight: bold;">ContactUs</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div class="col-sm-1">
+        
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+    <!--Context Section  -->
+    <div class="row">
+      <div class="col-sm-12">
+        <router-outlet></router-outlet>
+         
+      </div>
+    </div>
+
+<!-- Footer Section -->
+<div class="row" style="background-color: #a9e1a9;height: 95px;font-size: large;position: fixed;left: 0;bottom: 0;width: 100%">
+  <div class="col-sm-3">
+    <img style="width: 50px;margin-bottom: 20px;margin-top: 5px;margin-left: 30px;" src="Images/Logo.png" />
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4" >
+    <p style="margin-right: 100px;font-size: large;font-weight: bold;">Get Yashoda Mobile App</p>
+    <a href="https://www.facebook.com/">
+      <img style="width:50px;margin-left: 30px;" src="Images/facebook.png" />
+    </a>
+     <a href="https://x.com/?lang=en">
+      <img style="width:50px;margin-left: 30px;" src="Images/Twitter.png" />
+    </a>
+  </div>
+  <div class="col-sm-3">
+    <p style="margin-left: 30px;font-size: large;font-weight: bold;">Find us on</p>
+    <a href="https://www.facebook.com/">
+    <img style="width:50px;margin-left: 30px;" src="Images/facebook.png" />
+  </a>
+   <a href="https://x.com/?lang=en">
+    <img style="width:50px;margin-left: 30px;" src="Images/Twitter.png" />
+  </a>
+  </div>
+</div>
+  
+
+  </div>
+ </div>
+
+</div>
+
+
+<div *ngIf="flagSecure">
+  <!-- Secure pages -->
+  <div class="row">
+    <div class="col-sm-12">
+  
+      <!-- Header Section -->
+      <div class="row" style="background-color: #a9e1a9;height: 65px;padding-top: 10px;font-size: large;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+          <a routerLink="home" style="text-decoration: none;color: #0957b0;">
+          <img style="width: 50px;margin-bottom: 30px;" src="Images/Logo.png" alt="Apollo" />
+        </a>
+        </div>
+        <div class="col-sm-10" style="margin-top: 10px;text-align: right;">
+          <div>
+            <input type="button" value="Logout" class="btn btn-danger" (click)="btn_LogoutClick()" />
+          </div>
+        </div>        
+      </div>
+  
+      <!-- Context Section -->
+  
+      <div class="row">
+        <div class="col-sm-2" *ngIf="flagSecureMg" style="background-color: green; height: 470px;">
+          <div class="row">
+            <div class="col-sm-12">
+              <a routerLink="manageradmin" style="margin-left: 30px;text-decoration: none;color: white;font-weight: bold;">MA Profile</a>&nbsp;&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+
+         <div class="col-sm-2" *ngIf="flagSecOpr" style="background-color: rgb(194, 116, 15); height: 470px;">
+          <div class="row">
+            <div class="col-sm-12">
+              <a routerLink="operationaladmin" style="margin-left: 30px;text-decoration: none;color: #e4e6e9;font-weight: bold;">OP Profile</a>&nbsp;&nbsp;&nbsp;
+            </div>
+          </div>
+        </div> 
+        <div class="col-sm-10">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+  
+      <!-- FooterSection -->
+  
+      <div class="row" style="background-color: #a9e1a9;height: 95px;font-size: large;position: fixed;left: 0;bottom: 0;width: 100%">
+        <div class="col-sm-3">
+          <img style="width: 150px;margin-bottom: 20px;margin-top: 10px;margin-left: 30px;" src="Images/Logo.png" />
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4" >
+          <p style="margin-right: 100px;font-size: large;font-weight: bold;">Get Yashoda Mobile App</p>
+          <a href="https://www.facebook.com/">
+            <img style="width:50px;margin-left: 30px;" src="Images/facebook.png" />
+          </a>
+           <a href="https://x.com/?lang=en">
+            <img style="width:50px;margin-left: 30px;" src="Images/Twitter.png" />
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <p style="margin-left: 30px;font-size: large;font-weight: bold;">Find us on</p>
+          <a href="https://www.facebook.com/">
+          <img style="width:50px;margin-left: 30px;" src="Images/facebook.png" />
+        </a>
+         <a href="https://x.com/?lang=en">
+          <img style="width:50px;margin-left: 30px;" src="Images/Twitter.png" />
+        </a>
+        </div>
+      </div>
+  
+      
+   
+  </div>
+</div> 
+</div>
+
+
+  
+ 
+
+
+ 
